@@ -1,4 +1,7 @@
-package com.abhaya.sos.activities;
+//package com.example.abhaya_sos;
+package com.example.abhaya_sos.activities;
+
+
 
 import android.content.Intent;
 import android.os.Bundle;

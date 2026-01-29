@@ -1,32 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Permissions -->
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.SEND_SMS"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
+    <!-- Telephony hardware -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false"/>
+
     <application
         android:label="ABHAYA SOS"
+        android:icon="@mipmap/ic_launcher"
         android:theme="@style/Theme.AbhayaSOS"
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_rules"
         android:dataExtractionRules="@xml/data_extraction_rules">
 
         <activity
-            android:name="com.example.abhaya_sos.activities.LoginActivity"
+            android:name=".LoginActivity"
             android:exported="false"/>
 
         <activity
-            android:name="com.example.abhaya_sos.activities.RegisterActivity"
+            android:name=".RegisterActivity"
             android:exported="false"/>
 
         <activity
-            android:name="com.example.abhaya_sos.activities.ContactsActivity"
+            android:name=".ContactsActivity"
             android:exported="false"/>
 
         <activity
-            android:name="com.example.abhaya_sos.activities.DashboardActivity"
+            android:name=".DashboardActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -35,8 +44,9 @@
         </activity>
 
         <service
-            android:name="com.example.abhaya_sos.service.VoiceForegroundService"
-            android:exported="false"/>
+            android:name=".service.VoiceForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="microphone"/>
 
     </application>
 

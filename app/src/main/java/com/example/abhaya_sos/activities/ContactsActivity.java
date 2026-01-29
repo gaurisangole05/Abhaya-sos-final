@@ -1,4 +1,4 @@
-package com.abhaya.sos.activities;
+package com.example.abhaya_sos.activities;
 
 import android.os.Bundle;
 import android.widget.*;

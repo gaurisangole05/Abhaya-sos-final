@@ -2,17 +2,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme -->
-    <style name="Theme.AbhayaSOS" parent="Theme.AbhayaSOS">
+    <style name="Theme.AbhayaSOS" parent="Theme.Material3.DayNight.NoActionBar">
 
-        <!-- Primary colors -->
+
+    <!-- Primary colors -->
         <item name="colorPrimary">@color/pink</item>
         <item name="colorSecondary">@color/pink_dark</item>
 
         <!-- Status bar -->
-        <item name="android:statusBarColor">@color/pink_dark</item>
+<!--        <item name="statusBarColor">@color/pinkPrimary</item>-->
+
 
         <!-- Optional -->
-        <item name="android:windowLightStatusBar">false</item>
+<!--        <item name="android:windowLightStatusBar">false</item>-->
 
     </style>
 
