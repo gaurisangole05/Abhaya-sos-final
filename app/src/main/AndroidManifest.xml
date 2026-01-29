@@ -1,5 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.abhaya.sos">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.SEND_SMS"/>
@@ -9,14 +8,26 @@
 
     <application
         android:label="ABHAYA SOS"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-        <activity android:name=".activities.LoginActivity"/>
-        <activity android:name=".activities.RegisterActivity"/>
-        <activity android:name=".activities.ContactsActivity"/>
+        android:theme="@style/Theme.AbhayaSOS"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:dataExtractionRules="@xml/data_extraction_rules">
 
         <activity
-            android:name=".activities.DashboardActivity">
+            android:name="com.example.abhaya_sos.activities.LoginActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.example.abhaya_sos.activities.RegisterActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.example.abhaya_sos.activities.ContactsActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.example.abhaya_sos.activities.DashboardActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -24,8 +35,9 @@
         </activity>
 
         <service
-            android:name=".service.VoiceForegroundService"
+            android:name="com.example.abhaya_sos.service.VoiceForegroundService"
             android:exported="false"/>
 
     </application>
+
 </manifest>

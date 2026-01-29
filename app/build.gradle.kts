@@ -4,14 +4,12 @@ plugins {
 
 android {
     namespace = "com.example.abhaya_sos"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36   // ✅ FIXED
 
     defaultConfig {
         applicationId = "com.example.abhaya_sos"
-        minSdk = 16
-        targetSdk = 36
+        minSdk = 23
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -27,17 +25,20 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
 
-dependencies {
+dependencies{
+    implementation("com.google.android.material:material:1.11.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
